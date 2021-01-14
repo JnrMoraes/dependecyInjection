@@ -2,7 +2,7 @@ package com.dependencyinjection.Dependency.Injection.pagamento;
 
 import java.math.BigDecimal;
 
-public class PagSegurosService { // mock para Gateway com o PagSeguro
+public class PagSegurosService implements GatewayPagamento {
 
     private String token;
 
@@ -10,6 +10,7 @@ public class PagSegurosService { // mock para Gateway com o PagSeguro
         this.token = token;
     }
 
+    @Override
     public void efetuarPagamento(String numeroCartao, BigDecimal valor){
         System.out.printf("[PagSeguro] Usando Token %s\n", token);
         System.out.printf("[PagSeguro] Cobrando %f do cartão %s...\n", valor, numeroCartao);
