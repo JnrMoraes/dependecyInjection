@@ -1,6 +1,7 @@
 package com.dependencyinjection.Dependency.Injection.venda;
 
 import com.dependencyinjection.Dependency.Injection.pagamento.GatewayPagamento;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -10,9 +11,18 @@ public class VendaService {
 
     private GatewayPagamento gatewayPagamento;
 
-    public VendaService(GatewayPagamento gatewayPagamento) {
+//    public VendaService(GatewayPagamento gatewayPagamento) {
+//        this.gatewayPagamento = gatewayPagamento;
+//    }
+
+// Usado com Autowired reduz o Boilerplate mas fica mais trabalhoso para fazer teste, usado de forma implicita pela anotação
+// Tem que usar test com Reflection (Ver como fazer teste usando Reflection)
+
+    @Autowired
+    public void setVendaServide(GatewayPagamento gatewayPagamento){
         this.gatewayPagamento = gatewayPagamento;
     }
+
 
     public void registar(Venda venda, String numeroCartao){
         BigDecimal valorTotal = venda.getPrecoUnitario().multiply(new BigDecimal(venda.getQuantidade()));
