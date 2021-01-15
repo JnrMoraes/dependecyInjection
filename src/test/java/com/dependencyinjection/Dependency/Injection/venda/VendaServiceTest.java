@@ -16,11 +16,13 @@ class VendaServiceTest {
         venda.setQuantidade(2);
         venda.setPrecoUnitario(new BigDecimal(109.5));
 
-        // Usado com Autowired reduz o Boilerplate, usado o método de forma implicita pela anotação
 
-        VendaService vendaService = new VendaService();
-        vendaService.setVendaServide(new PagSegurosService("857db3bbb149abc89433420f4d18bdf3"));
-        vendaService.registar(venda,"4024000109920098753");
+    // Usado com Autowired reduz o Boilerplate mas fica mais trabalhoso para fazer teste, usado de forma implicita pela anotação
+    // Tem que usar test com bibliotecas com Reflection (Ver como fazer teste usando Reflection)
+
+//        VendaService vendaService = new VendaService();
+//        vendaService.setVendaServide(new PagSegurosService("857db3bbb149abc89433420f4d18bdf3"));
+//        vendaService.registar(venda,"4024000109920098753");
 
     }
 
