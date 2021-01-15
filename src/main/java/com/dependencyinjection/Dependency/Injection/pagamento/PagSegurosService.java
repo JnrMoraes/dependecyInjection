@@ -2,10 +2,8 @@ package com.dependencyinjection.Dependency.Injection.pagamento;
 
 import java.math.BigDecimal;
 
-public class PagSegurosService { // mock para Gateway com o PagSeguro
-
+public class PagSegurosService implements GatewayPagamento {
     private String token;
-
     public PagSegurosService(String token) {
         this.token = token;
     }
