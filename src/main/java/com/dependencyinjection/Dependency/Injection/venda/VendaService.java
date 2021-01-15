@@ -1,9 +1,11 @@
 package com.dependencyinjection.Dependency.Injection.venda;
 
 import com.dependencyinjection.Dependency.Injection.pagamento.GatewayPagamento;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+@Component // Declarando assim não precisa do Bean explícito em config, pq a anotacão Component tbm é um Bean
 public class VendaService {
 
     private GatewayPagamento gatewayPagamento;
