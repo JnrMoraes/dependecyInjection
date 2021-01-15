@@ -21,6 +21,8 @@ class VendaServiceTest {
 
         /*
          * Independente da forma da venda não é preciso alterar a classe VendaService
+         * Foi intadodo como parametro, dando a possibilidade de das dependecias serem injetadas e não ela
+         * resolver por si só instanciar o que for preciso
          */
 
 //        VendaService vendaService = new VendaService(new PagSegurosService("857db3bbb149abc89433420f4d18bdf3"));        VendaService vendaService = new VendaService(new PagSegurosService("857db3bbb149abc89433420f4d18bdf3"));
