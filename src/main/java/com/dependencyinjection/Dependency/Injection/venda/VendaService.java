@@ -24,7 +24,7 @@ public class VendaService {
 //    }
 
 
-    public void registar(Venda venda, String numeroCartao){
+    public void registrar(Venda venda, String numeroCartao){
         BigDecimal valorTotal = venda.getPrecoUnitario().multiply(new BigDecimal(venda.getQuantidade()));
 
         System.out.printf("[Venda] Registrando venda de %s no valor total de %f...\n",

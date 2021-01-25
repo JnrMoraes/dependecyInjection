@@ -29,7 +29,7 @@ public class DependencyInjectionApplication {
 		venda.setQuantidade(2);
 		venda.setPrecoUnitario(new BigDecimal(109.5));
 
-		vendaService.registar(venda,"4024000109920098753");
+		vendaService.registrar(venda,"4024000109920098753");
 
 
 

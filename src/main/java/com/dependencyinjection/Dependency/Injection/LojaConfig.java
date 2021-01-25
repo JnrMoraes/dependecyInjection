@@ -1,10 +1,8 @@
 package com.dependencyinjection.Dependency.Injection;
 
 
-import com.dependencyinjection.Dependency.Injection.pagamento.GatewayPagamento;
 import com.dependencyinjection.Dependency.Injection.pagamento.PagSegurosService;
 import com.dependencyinjection.Dependency.Injection.pagamento.PayPalService;
-import com.dependencyinjection.Dependency.Injection.venda.VendaService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
